@@ -1,5 +1,28 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="textsize_drawer">18sp</dimen>
+    <dimen name="textsize_small">12sp</dimen>
+    <dimen name="textsize_normal">16sp</dimen>
+    <dimen name="textsize_large">19sp</dimen>
+    <dimen name="edittext_height">48dp</dimen>
+    <dimen name="height_textview">48dp</dimen>
+    <dimen name="height_layout">48dp</dimen>
+    <dimen name="padding_imageview">8dp</dimen>
+    <dimen name="padding_textview">4dp</dimen>
+    <dimen name="padding_button">8dp</dimen>
+    <dimen name="margin_drawer_textview">8dp</dimen>
+    <dimen name="margin_drawer_imageview">8dp</dimen>
+    <dimen name="margin_listview">5dp</dimen>
+    <dimen name="divider_listview">5dp</dimen>
+    <dimen name="margin_layout">5dp</dimen>
+    <dimen name="margin_textview">4dp</dimen>
+    <dimen name="drawer_item_height">60dp</dimen>
+    <dimen name="drawer_item_icon">36dp</dimen>
+    <dimen name="drawer_width">240dp</dimen>
+    <dimen name="imageview_icon">36dp</dimen>
+    <dimen name="imageview_empty_icon">72dp</dimen>
+    <dimen name="imageview_banner_image">150dp</dimen>
+    <dimen name="padding_banner">48dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>

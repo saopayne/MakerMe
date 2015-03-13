@@ -7,4 +7,32 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_forgot_password">Forgot Password</string>
 
+    <!-- fonts -->
+    <string name="font_light">light</string>
+    <string name="font_black_italic">black_italic</string>
+    <string name="font_bold_italic">bold_italic</string>
+    <string name="font_bold">bold</string>
+    <string name="font_black">black</string>
+    <string name="font_condensed_bold_italic">condensed_bold_italic</string>
+    <string name="font_condensed_bold">condensed_bold</string>
+    <string name="font_condensed_italic">condensed_italic</string>
+    <string name="font_condensed_light_italic">condensed_light_italic</string>
+    <string name="font_condensed_light">condensed_light</string>
+    <string name="font_condensed_regular">condensed_regular</string>
+    <string name="font_italic">italic</string>
+    <string name="font_light_italic">light_italic</string>
+    <string name="font_medium_italic">medium_italic</string>
+    <string name="font_regular">regular</string>
+    <string name="font_thin_italic">thin_italic</string>
+    <string name="font_thin">thin</string>
+
+
+    <string name="hint_firstname">First name</string>
+    <string name="hint_lastname">Last name</string>
+    <string name="hint_fullname">Full name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_password_confirm">Password (again)</string>
 </resources>

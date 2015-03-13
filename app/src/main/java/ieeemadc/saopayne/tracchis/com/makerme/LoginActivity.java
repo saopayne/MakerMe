@@ -1,17 +1,34 @@
 package ieeemadc.saopayne.tracchis.com.makerme;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends ActionBarActivity implements View.OnClickListener{
+
+    private EditText emailEditText;
+    private EditText passwordEditText;
+    private Button loginButton;
+    private TextView registerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        emailEditText = (EditText)findViewById(R.id.edittext_email);
+        passwordEditText = (EditText)findViewById(R.id.edittext_password);
+        loginButton = (Button)findViewById(R.id.button_login);
+        loginButton.setOnClickListener(this);
+        registerText = (TextView)findViewById(R.id.textview_register);
+        registerText.setOnClickListener(this);
     }
 
 
@@ -35,5 +52,27 @@ public class LoginActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void doLogin(){
+        String emailText = emailEditText.getText().toString().trim();
+        String passwordText = passwordEditText.getText().toString().trim();
+        
+    }
+
+    private void doRegister(){
+        Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+        startActivity(intent);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.equals(loginButton)){
+            doLogin();
+        }
+        if(v.equals(registerText)){
+            doRegister();
+        }
     }
 }

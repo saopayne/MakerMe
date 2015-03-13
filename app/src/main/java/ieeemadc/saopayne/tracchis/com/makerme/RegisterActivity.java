@@ -1,12 +1,26 @@
 package ieeemadc.saopayne.tracchis.com.makerme;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 
-public class RegisterActivity extends ActionBarActivity {
+public class RegisterActivity extends ActionBarActivity implements View.OnClickListener {
+
+    private EditText fullNameEditText;
+    private EditText emailEditText;
+    private EditText passwordEditText;
+    private Spinner countrySpinner;
+    private Spinner educationLevelSpinner;
+    private Button registerButton;
+    private TextView loginTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +49,23 @@ public class RegisterActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void doRegister(){
+        String fullName = fullNameEditText.getText().toString().trim();
+        String email = emailEditText.getText().toString().trim();
+        String password = passwordEditText.getText().toString().trim();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.equals(registerButton)){
+
+        }
+        if(v.equals(loginTextView)){
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
     }
 }

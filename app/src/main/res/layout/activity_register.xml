@@ -1,9 +1,111 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="ieeemadc.saopayne.tracchis.com.makerme.RegisterActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical" >
 
-</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/layout_login_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        >
+        <ImageView
+            android:id="@+id/imageview_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:paddingBottom="@dimen/padding_banner"
+            />
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomEditText
+            android:id="@+id/edittext_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@null"
+            android:gravity="center"
+            android:cursorVisible="true"
+            android:layout_below="@id/imageview_banner"
+            android:hint="@string/hint_fullname"
+            custom:textFont="@string/font_light"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:textColor="#000"
+            android:nextFocusDown="@+id/edittext_email"
+            />
+
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomEditText
+            android:id="@+id/edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@null"
+            android:gravity="center"
+            android:cursorVisible="true"
+            android:layout_below="@id/edittext_fullname"
+            android:hint="@string/hint_email"
+            custom:textFont="@string/font_light"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="#000"
+            android:nextFocusDown="@+id/edittext_password"
+            />
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomEditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@null"
+            android:layout_below="@id/edittext_email"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:cursorVisible="true"
+            android:textColor="#000"
+            android:hint="@string/hint_password"
+            custom:textFont="@string/font_light"
+            />
+        <Spinner
+            android:id="@+id/spinner_country"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/edittext_password">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner_edu_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/spinner_country">
+
+        </Spinner>
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomButton
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_normal"
+            android:layout_below="@id/edittext_password"
+            android:layout_margin="@dimen/padding_button"
+            android:padding="@dimen/padding_button"
+            android:textColor="@color/textcolor_light"
+            android:text="Register"
+            custom:textFont="@string/font_light"
+            android:background="@drawable/button_custom"
+            />
+
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomEditText
+            android:id="@+id/textview_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_login"
+            android:layout_marginBottom="@dimen/padding_button"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textcolor_dark"
+            android:textSize="@dimen/textsize_normal"
+            android:text="Have an account? Login"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
