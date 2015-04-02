@@ -20,15 +20,20 @@
     <color name="drawer_list_item_pressed">#d5d2d2</color>
     <!-- <color name="drawer_list_item_selected">#363535</color> -->
     <color name="drawer_list_item_selected">#c2bdbd</color>
-    
     <color name="background_white">#ffffff</color>
     <color name="background_white_pressed">#e7e4e4</color>
-    
     <color name="background_white_shadow">#ebe5e5</color>
     <color name="background_white_shadow_pressed">#d6d2d2</color>
-    
     <color name="button_normal">#3b75ec</color>
     <color name="button_pressed">#0f56e8</color>
-    
+    <color name="gray_btn_default">#f0f0f0</color>
+    <color name="list_row_default_bg">#ffffff</color>
+    <color name="list_row_pressed_bg">#008cef</color>
+    <color name="list_row_selected_bg">#86d3f6</color>
+    <color name="map_floorselect_active">#FF000000</color>
+    <color name="map_floorselect_inactive">#FF333333</color>
+    <color name="ColorPrimary">#3593ea</color>
+    <color name="ColorPrimaryDark">#0f56e8</color>
+    <color name="tabsScrollColor">#86d3f6</color>
     
 </resources>

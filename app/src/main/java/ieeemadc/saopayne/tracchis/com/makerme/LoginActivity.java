@@ -1,5 +1,6 @@
 package ieeemadc.saopayne.tracchis.com.makerme;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,13 +11,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.parse.LogInCallback;
+import com.parse.ParseUser;
 
-public class LoginActivity extends ActionBarActivity implements View.OnClickListener{
+import java.text.ParseException;
+
+import ieeemadc.saopayne.tracchis.com.makerme.utils.Utils;
+
+
+public class LoginActivity extends Activity implements View.OnClickListener{
 
     private EditText emailEditText;
     private EditText passwordEditText;
     private Button loginButton;
     private TextView registerText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +63,31 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         return super.onOptionsItemSelected(item);
     }
 
-    private void doLogin(){
+    private void doLogin() {
         String emailText = emailEditText.getText().toString().trim();
         String passwordText = passwordEditText.getText().toString().trim();
-        
+        // Retrieve the text entered from the EditText
+
+        // Send data to Parse.com for verification
+        ParseUser.logInInBackground(emailText, passwordText,
+                new LogInCallback() {
+                    @Override
+                    public void done(ParseUser parseUser, com.parse.ParseException e) {
+                        if (parseUser != null) {
+                            // If user exist and authenticated, send user to Welcome.class
+                            Intent intent = new Intent(
+                                    LoginActivity.this,
+                                    HomeActivity.class);
+                            startActivity(intent);
+                            Utils.makeShortToast("Successfully logged in.");
+                            finish();
+                        } else {
+                            Utils.makeLongToast("User doesn't exist, please sign up");
+                        }
+                    }
+                });
     }
+
 
     private void doRegister(){
         Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
@@ -69,7 +98,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if(v.equals(loginButton)){
-            doLogin();
+//            doLogin();
+            Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+            startActivity(intent);
         }
         if(v.equals(registerText)){
             doRegister();

@@ -47,7 +47,7 @@ public class CustomTextView extends TextView {
 			}
 			float size = getTextSize();
 			
-			setTextSize(TypedValue.COMPLEX_UNIT_PX, size * new AppPreferences().getFontScale());
+			setTextSize(TypedValue.COMPLEX_UNIT_PX, size * new AppPreferences(getContext()).getFontScale());
 			array.recycle();
 		}
 	}

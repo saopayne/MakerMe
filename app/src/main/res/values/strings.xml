@@ -25,8 +25,6 @@
     <string name="font_regular">regular</string>
     <string name="font_thin_italic">thin_italic</string>
     <string name="font_thin">thin</string>
-
-
     <string name="hint_firstname">First name</string>
     <string name="hint_lastname">Last name</string>
     <string name="hint_fullname">Full name</string>
@@ -35,4 +33,37 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_password_confirm">Password (again)</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="string_be_an_engineer">Be an Engineer?</string>
+    <string name="string_be_an_engineer_descr">This is for people who are looking for what it takes to be an engineer.</string>
+    <string name="string_regional_news">IEEE Regional News</string>
+    <string name="string_regional_news_descr">This contains IEEE news specific to your region.</string>
+    <string name="string_history">History</string>
+    <string name="string_history_descr">This shows people who have done outstanding things in the tech world and features
+        those who have contributed immensely to the field of science and tech. </string>
+    <string name="string_settings">Settings</string>
+    <string name="string_settings_descr">Change the app settings (personalise and own it).</string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Be an Engineer?</item>
+        <item>IEEE Regional News</item>
+        <item>History</item>
+        <item>Settings</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </array>
+
+    <string name="title_activity_be_engineer">BeEngineerActivity</string>
+    <string name="title_activity_regional_news">RegionalNewsActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
 </resources>

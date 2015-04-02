@@ -1,41 +1,24 @@
 package ieeemadc.saopayne.tracchis.com.makerme;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import ieeemadc.saopayne.tracchis.com.makerme.fragments.FragmentRegisterOne;
-import ieeemadc.saopayne.tracchis.com.makerme.utils.Utils;
 
 
-public class RegisterActivity extends FragmentActivity implements View.OnClickListener{
-
+public class RegionalNewsActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        Fragment pageOneFragment = new FragmentRegisterOne();
-        Bundle args = new Bundle();
-        pageOneFragment.setArguments(args);
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.registerFragment,pageOneFragment).commit();
-
-
+        setContentView(R.layout.activity_regional_news);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_register, menu);
+        getMenuInflater().inflate(R.menu.menu_regional_news, menu);
         return true;
     }
 
@@ -52,11 +35,5 @@ public class RegisterActivity extends FragmentActivity implements View.OnClickLi
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    public void onClick(View view) {
-
     }
 }
