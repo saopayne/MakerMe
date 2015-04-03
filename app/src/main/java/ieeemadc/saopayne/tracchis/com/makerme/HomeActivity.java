@@ -16,11 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.astuetz.PagerSlidingTabStrip;
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
@@ -39,12 +37,11 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
     /**
      * UI Views
      */
-
     Toolbar toolbar;
     ViewPager pager;
     HomePageTabAdapter homeAdapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[] = {"Interest","New Tech","General"};
+    CharSequence Titles[] = {"Interests","New Tech","General"};
     int Numboftabs = 3;
     /**
      * For the navigation drawers
@@ -190,79 +187,15 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         );
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
-                this,  mDrawerLayout, toolbar,
+                this,  drawer, toolbar,
                 R.string.string_settings, R.string.string_settings
         );
-        drawer.setDrawerListener(new ActionBarDrawerToggle( this,  mDrawerLayout, toolbar,
-                R.string.string_settings, R.string.string_settings));
+        drawer.setDrawerListener(mDrawerToggle);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-//        mDrawerToggle.syncState();
-
-//
-//        mTitle = mDrawerTitle = getTitle();
-//        // load slide menu items
-//        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
-//
-//        // nav drawer icons from resources\
-//        navMenuIcons = getResources()
-//                .obtainTypedArray(R.array.nav_drawer_icons);
-//
-//        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-//        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-//        mDrawerList.setBackgroundResource(R.color.drawer_background);
-//
-//
-//
-//        navDrawerItems = new ArrayList<NavDrawerItem>();
-//
-//        mDrawerToggle = new ActionBarDrawerToggle(this,
-//                mDrawerLayout
-//                , R.drawable.ic_drawer // navigation menu toggle icon
-//                , R.string.app_name //when the drawer opens
-//                , R.string.app_name) // when the drawer closes
-//        {
-//            public void onDrawerClosed(View view) {
-////                getActionBar().setTitle(mTitle);
-//                // calling onPrepareOptionsMenu() to show action bar icons
-//                invalidateOptionsMenu();
-//            }
-//
-//            public void onDrawerOpened(View drawerView) {
-////                getActionBar().setTitle(mDrawerTitle);
-//                // calling onPrepareOptionsMenu() to hide action bar icons
-//                invalidateOptionsMenu();
-//            }
-//        };
-//
-//        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerToggle.syncState();
 
     }
-
-    /**
-     *  Slide menu item click listener
-     **/
-    private class SlideMenuClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parentduration, View view, int position,long id) {
-            // display view for selected nav drawer item
-            switch (position) {
-
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -272,9 +205,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }

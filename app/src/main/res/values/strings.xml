@@ -61,9 +61,22 @@
         <item>@drawable/ic_launcher</item>
     </array>
 
-    <string name="title_activity_be_engineer">BeEngineerActivity</string>
-    <string name="title_activity_regional_news">RegionalNewsActivity</string>
-    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_be_engineer">Be An Engineer</string>
+    <string name="title_activity_regional_news">Regional News</string>
+    <string name="title_activity_history">History</string>
     <string name="title_activity_settings">Settings</string>
+
+
+    <!--  List of options and fields to choose from-->
+    <string name="computer_engineering">Computer Sci/Eng</string>
+    <string name="electronic_electrical_engineering">Electronic/Electrical</string>
+    <string name="chemical_engineering">Chemical</string>
+    <string name="mechanical_engineering">Mechanical</string>
+    <string name="agricultural_engineering">Agricultural</string>
+    <string name="Metallurgy_materials_engineering">Metallurgy and Materials</string>
+    <string name="food_engineering">Food Tech</string>
+    <string name="civil_engineering">Civil/Contruction</string>
+    <string name="aeronautic_engineering">Aeronautics</string>
+    <string name="nano_technology">Nanotechnology</string>
 
 </resources>

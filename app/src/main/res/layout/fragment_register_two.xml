@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_white">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:background="@color/ColorPrimary"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Maker+"
+        android:textColor="@color/background_white"
+        />
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tick the fields you are interested in."
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_computer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/computer_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_electrical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/electronic_electrical_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_chemical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/chemical_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_mechanical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/mechanical_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_agricultural"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/agricultural_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_metallurgy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/Metallurgy_materials_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/food_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_civil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/civil_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_aeronautics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/aeronautic_engineering"
+        android:textColor="#000"/>
+
+    <CheckBox
+        android:id="@+id/box_nanotech"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/nano_technology"
+        android:textColor="#000"/>
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomButton
+        android:id="@+id/button_sec_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_normal"
+        android:layout_margin="@dimen/padding_button"
+        android:padding="@dimen/padding_button"
+        android:textColor="@color/textcolor_light"
+        android:text="Sign Up"
+        custom:textFont="@string/font_light"
+        android:background="@drawable/button_custom"
+        />
+
+
 </LinearLayout>
+
+</ScrollView>
