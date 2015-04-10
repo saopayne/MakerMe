@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="4dip"
+    android:background="@drawable/card_background">
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/regional_news_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I have a dream like that for the future."
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:padding="3dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+            android:id="@+id/regional_news_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80-05-1992"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="3dp"
+            android:textSize="17sp"
+            android:textStyle="normal"/>
+
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+            android:id="@+id/regional_news_item_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IEEE SAOCHAPTER"
+            android:layout_weight="1"
+            android:paddingRight="3dp"
+            android:gravity="right|end"
+            android:textStyle="normal"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

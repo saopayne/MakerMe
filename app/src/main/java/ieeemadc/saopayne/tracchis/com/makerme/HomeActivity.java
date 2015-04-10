@@ -16,23 +16,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerItem;
 import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 
-import java.util.ArrayList;
-
 import ieeemadc.saopayne.tracchis.com.makerme.adapters.HomePageTabAdapter;
-import ieeemadc.saopayne.tracchis.com.makerme.adapters.NavDrawerListAdapter;
-import ieeemadc.saopayne.tracchis.com.makerme.views.NavDrawerItem;
 import ieeemadc.saopayne.tracchis.com.makerme.views.SlidingTabLayout;
 
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-public class HomeActivity extends ActionBarActivity implements View.OnClickListener,ActionBar.TabListener{
+public class HomeActivity extends ActionBarActivity implements View.OnClickListener{
 
     /**
      * UI Views
@@ -46,23 +40,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
     /**
      * For the navigation drawers
      */
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-    private ActionBarDrawerToggle mDrawerToggle;
-    // nav drawer title
-    private CharSequence mDrawerTitle;
-
-    // used to store app title
-    private CharSequence mTitle;
-
-    // slide menu items
-    private String[] navMenuTitles;
-    private TypedArray navMenuIcons;
-
-    private ArrayList<NavDrawerItem> navDrawerItems;
-    private NavDrawerListAdapter adapter;
-    private TextView brandLinkText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +68,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
         // Assigning ViewPager View and setting the adapter
         pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(homeAdapter);
+        pager.setOffscreenPageLimit(2);
 
         // Assiging the Sliding Tab Layout View
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
@@ -146,7 +124,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
                             }
                         })
         );
-        drawer.addDivider();
         drawer.addItem(
                 new DrawerItem()
                         .setImage(getResources().getDrawable(R.drawable.region_icon))
@@ -159,7 +136,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
                             }
                         })
         );
-        drawer.addDivider();
+//        drawer.addDivider();
         drawer.addItem(
                 new DrawerItem()
                         .setImage(getResources().getDrawable(R.drawable.history_icon))
@@ -172,7 +149,7 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
                             }
                         })
         );
-        drawer.addDivider();
+//        drawer.addDivider();
         drawer.addItem(
                 new DrawerItem()
                         .setImage(getResources().getDrawable(R.drawable.settings_icon))
@@ -181,6 +158,19 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
                             @Override
                             public void onClick(DrawerItem drawerItem, int id, int position) {
                                 Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+        );
+
+        drawer.addItem(
+                new DrawerItem()
+                        .setImage(getResources().getDrawable(R.drawable.about))
+                        .setTextPrimary(getString(R.string.title_activity_about))
+                        .setOnItemClickListener(new DrawerItem.OnItemClickListener() {
+                            @Override
+                            public void onClick(DrawerItem drawerItem, int id, int position) {
+                                Intent intent = new Intent(HomeActivity.this, AboutActivity.class);
                                 startActivity(intent);
                             }
                         })
@@ -206,7 +196,6 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
         //noinspection SimplifiableIfStatement
 
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -215,18 +204,5 @@ public class HomeActivity extends ActionBarActivity implements View.OnClickListe
 
     }
 
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-
-    }
 }

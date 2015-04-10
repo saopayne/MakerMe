@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -38,6 +39,11 @@ public class FragmentRegisterOne extends Fragment implements View.OnClickListene
 
     private View rootView = null;
 
+    private static final String DEFAULT_COUNTRY_LOCAL = "Nigeria";
+    private static final String DEFAULT_EDU_BGROUND = "";
+    private String [] array_country_spinner;
+    private String [] array_edu_spinner;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final Context context = getActivity();
@@ -59,6 +65,17 @@ public class FragmentRegisterOne extends Fragment implements View.OnClickListene
         registerButton.setOnClickListener(this);
         loginTextView  = (TextView)rootView.findViewById(R.id.textview_login);
         loginTextView.setOnClickListener(this);
+
+        array_country_spinner = getResources().getStringArray(R.array.countries_array);
+        ArrayAdapter countryAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, array_country_spinner);
+        countrySpinner.setAdapter(countryAdapter);
+        countrySpinner.setSelection(countryAdapter.getPosition(DEFAULT_COUNTRY_LOCAL));
+
+        array_edu_spinner = getResources().getStringArray(R.array.edu_background);
+        ArrayAdapter eduAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, array_edu_spinner);
+        educationLevelSpinner.setAdapter(eduAdapter);
+        educationLevelSpinner.setSelection(eduAdapter.getPosition(DEFAULT_EDU_BGROUND));
+
     }
 
 

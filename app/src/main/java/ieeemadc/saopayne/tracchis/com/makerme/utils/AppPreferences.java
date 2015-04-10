@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.support.annotation.NonNull;
+import android.util.Log;
 
 import ieeemadc.saopayne.tracchis.com.makerme.MakerME;
 
@@ -21,6 +23,7 @@ import ieeemadc.saopayne.tracchis.com.makerme.MakerME;
 
 public class AppPreferences {
 
+    @NonNull
     SharedPreferences prefs;
     Context context;
 
@@ -29,12 +32,15 @@ public class AppPreferences {
         prefs = context.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
     }
 
-    public AppPreferences(){
-        prefs = MakerME.getAppContext().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
-        this.context = MakerME.getAppContext();
-    }
 
-    public void setDeviceID(String deviceId){
+    public AppPreferences(){
+        this.context = MakerME.getAppContext();
+        if(MakerME.getAppContext().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE) != null) {
+            prefs = MakerME.getAppContext().getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
+        }else
+        {
+            Log.d("null","The app context is null");
+        }
     }
 
     public float getFontScale(){

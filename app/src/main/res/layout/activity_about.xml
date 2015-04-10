@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ieeemadc.saopayne.tracchis.com.makerme.AboutActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/about_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:text="@string/app_name"
+        android:paddingTop="10dp"
+        android:textColor="@color/textcolor_title"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="23sp"/>
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/about_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_header"
+        android:textSize="20sp"
+        android:text="@string/about_me_string"
+        android:padding="6dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_content"
+        android:layout_marginTop="6dp"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/maker_plus_small"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ieeelogo"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/oaulogo"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

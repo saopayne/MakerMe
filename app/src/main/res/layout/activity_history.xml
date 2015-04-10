@@ -10,4 +10,74 @@
         android:layout_width="match_parent"
         />
 
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/engineering_feat_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:text="Engineering Feats"
+        android:textColor="#000"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_background"
+        />
+
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/engineering_women_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engineering_feat_history"
+        android:text="Remarkable Women in Engineering"
+        android:textColor="#000"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_background"
+        />
+
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/engineering_inventions_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engineering_women_history"
+        android:text="Inventions and Dateline"
+        android:textColor="#000"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_background"
+        />
+
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/engineering_organisations_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engineering_inventions_history"
+        android:text="Reputable Engineering Organisations"
+        android:textColor="#000"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_background"
+        />
+
+
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/engineering_main_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engineering_organisations_history"
+        android:text="How Engineering grew."
+        android:textColor="#000"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/card_background"
+        />
+
+
 </RelativeLayout>

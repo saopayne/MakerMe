@@ -1,9 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ieeemadc.saopayne.tracchis.com.makerme.SettingsActivity">
-
+    android:background="@color/background"
+    android:layout_height="match_parent" >
 
     <include
         android:id="@+id/tool_bar"
@@ -11,5 +10,27 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         />
+
+    <RelativeLayout
+        android:id="@+id/button_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_marginTop="3dp"
+        android:minHeight="@dimen/drawer_item_height"
+        android:clickable="true"
+        android:background="@drawable/card_background">
+        <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+            android:id="@+id/textview_fontsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_normal"
+            android:textColor="@color/textcolor_dark"
+            android:text="Adjust text size"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

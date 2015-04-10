@@ -35,5 +35,9 @@
     <color name="ColorPrimary">#3593ea</color>
     <color name="ColorPrimaryDark">#0f56e8</color>
     <color name="tabsScrollColor">#86d3f6</color>
+
+    <color name="orange">#FF9900</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
     
 </resources>

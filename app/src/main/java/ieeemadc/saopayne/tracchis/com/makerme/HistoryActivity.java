@@ -5,11 +5,19 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
-public class HistoryActivity extends ActionBarActivity {
+public class HistoryActivity extends ActionBarActivity implements View.OnClickListener{
 
     private Toolbar toolbar;
+    private TextView featTextView;
+    private TextView womenTextView;
+    private TextView inventionsTextView;
+    private TextView organisationsTextView;
+    private TextView coreTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +30,17 @@ public class HistoryActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        featTextView = (TextView)findViewById(R.id.engineering_feat_history);
+        featTextView.setOnClickListener(this);
+        womenTextView = (TextView)findViewById(R.id.engineering_women_history);
+        womenTextView.setOnClickListener(this);
+        inventionsTextView = (TextView)findViewById(R.id.engineering_inventions_history);
+        inventionsTextView.setOnClickListener(this);
+        organisationsTextView = (TextView)findViewById(R.id.engineering_organisations_history);
+        organisationsTextView.setOnClickListener(this);
+        coreTextView  = (TextView)findViewById(R.id.engineering_main_history);
+        coreTextView.setOnClickListener(this);
     }
 
 
@@ -50,5 +69,10 @@ public class HistoryActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

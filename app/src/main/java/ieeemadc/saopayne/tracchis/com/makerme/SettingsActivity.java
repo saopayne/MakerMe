@@ -5,11 +5,18 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import ieeemadc.saopayne.tracchis.com.makerme.fragments.dialog.AdialogFragment;
+import ieeemadc.saopayne.tracchis.com.makerme.fragments.dialog.DialogCallBack;
+import ieeemadc.saopayne.tracchis.com.makerme.utils.AppPreferences;
 
 
-public class SettingsActivity extends ActionBarActivity {
+public class SettingsActivity extends ActionBarActivity implements DialogCallBack {
 
     private Toolbar toolbar;
+    View buttonFont;
+    final static int WHICH_FONT = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,18 @@ public class SettingsActivity extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        buttonFont = findViewById(R.id.button_font);
+        buttonFont.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                AdialogFragment dialog = AdialogFragment.getInstance(SettingsActivity.this, WHICH_FONT, "Adjust font size", "Use this size", "Cancel");
+                dialog.show(getSupportFragmentManager(),"font_size");
+            }
+
+        });
     }
 
 
@@ -51,5 +70,36 @@ public class SettingsActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onPositiveButtonSelected(int which, String data) {
+        // TODO Auto-generated method stub
+        switch(which){
+            case WHICH_FONT:
+                float scaleFactor = Float.valueOf(data);
+                new AppPreferences().setFontScale(scaleFactor);
+                break;
+        }
+    }
+
+
+    @Override
+    public void onNegativeButtonSelected(int which, String data) {
+        // TODO Auto-generated method stub
+
+    }
+
+
+    @Override
+    public void onNeutralButtonSelected(int which, String data) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void onDialogCancel(int which) {
+        // TODO Auto-generated method stub
+
     }
 }

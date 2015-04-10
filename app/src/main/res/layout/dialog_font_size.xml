@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SeekBar
+        android:id="@+id/seekbar_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:max="3"
+        android:layout_margin="@dimen/margin_layout"
+        android:progress="2"
+        />
+    <ieeemadc.saopayne.tracchis.com.makerme.views.CustomTextView
+        android:id="@+id/textview_font_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:textFont="@string/font_regular"
+        android:layout_below="@id/seekbar_font"
+        android:textColor="@color/textcolor_dark"
+        android:textSize="@dimen/textsize_normal"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_layout"
+        android:gravity="center"
+        android:text="The \'quick\'brown fox jumps over the \'lazy\' dog"/>
+</RelativeLayout>

@@ -17,7 +17,7 @@
             android:id="@+id/imageview_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/maker_plus"
             android:paddingBottom="@dimen/padding_banner"
             />
         <ieeemadc.saopayne.tracchis.com.makerme.views.CustomEditText
